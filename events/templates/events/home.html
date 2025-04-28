@@ -1,0 +1,71 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Ana Sayfa - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2 text-center">
+        <h1 class="display-4 mb-4">MeetUp Buddy'ye Hoşgeldiniz!</h1>
+        <p class="lead mb-4">İlgi alanlarınıza göre etkinlikler oluşturun, mevcut etkinliklere katılın ve yeni insanlarla tanışın.</p>
+        
+        {% if not user.is_authenticated %}
+        <div class="mb-4">
+            <a href="{% url 'register' %}" class="btn btn-primary btn-lg me-2">Kayıt Ol</a>
+            <a href="{% url 'login' %}" class="btn btn-outline-primary btn-lg">Giriş Yap</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h3 class="card-title">Etkinlik Oluştur</h3>
+                <p class="card-text">İlgi alanlarınıza göre etkinlikler oluşturun ve benzer ilgi alanlarına sahip insanlarla buluşun.</p>
+                <a href="{% url 'event_create' %}" class="btn btn-primary">Etkinlik Oluştur</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h3 class="card-title">Etkinliklere Katıl</h3>
+                <p class="card-text">Size uygun etkinlikleri keşfedin ve katılın. Yeni insanlarla tanışın ve sosyal çevrenizi genişletin.</p>
+                <a href="{% url 'event_list' %}" class="btn btn-primary">Etkinlikleri Gör</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h3 class="card-title">İlgi Alanlarını Seç</h3>
+                <p class="card-text">İlgi alanlarınızı belirleyin ve size uygun etkinliklerden haberdar olun.</p>
+                <a href="{% url 'profile' %}" class="btn btn-primary">Profili Düzenle</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if latest_events %}
+<div class="row mt-5">
+    <div class="col-12">
+        <h2 class="text-center mb-4">Yaklaşan Etkinlikler</h2>
+        <div class="row">
+            {% for event in latest_events %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ event.title }}</h5>
+                        <p class="card-text">{{ event.description|truncatewords:30 }}</p>
+                        <p class="card-text"><small class="text-muted">{{ event.date|date:"d F Y, H:i" }}</small></p>
+                        <a href="{% url 'event_detail' event.id %}" class="btn btn-outline-primary">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %} 

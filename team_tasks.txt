@@ -1,0 +1,215 @@
+# MeetUp Buddy - Ekip Görevleri ve Dosya Dağılımı
+
+## Frontend Developer (12 Issues)
+
+### Dosyalar:
+1. templates/base/base.html
+2. templates/events/home.html
+3. templates/users/register.html
+4. templates/users/login.html
+5. templates/users/profile.html
+6. templates/events/event_list.html
+7. templates/events/event_detail.html
+8. templates/events/event_form.html
+9. static/css/style.css
+10. static/js/main.js
+11. static/js/animations.js
+12. templates/errors/ (404.html, 500.html, maintenance.html)
+
+### Commit Komutları:
+```bash
+git checkout -b feature/frontend
+
+# Issue 1: Ana sayfa tasarımı
+git add templates/base/base.html
+git commit -m "Fixes #1: Create base template with Bootstrap 5"
+
+# Issue 2: Kullanıcı profil sayfası
+git add templates/users/profile.html
+git commit -m "Fixes #2: Design user profile page"
+
+# Issue 3: Etkinlik oluşturma formu
+git add templates/events/event_form.html
+git commit -m "Fixes #3: Create event creation form"
+
+# Issue 4: Etkinlik detay sayfası
+git add templates/events/event_detail.html
+git commit -m "Fixes #4: Design event detail page"
+
+# Issue 5: Kullanıcı giriş/kayıt sayfaları
+git add templates/users/login.html templates/users/register.html
+git commit -m "Fixes #5: Create login and registration pages"
+
+# Issue 6: Responsive tasarım
+git add static/css/style.css
+git commit -m "Fixes #6: Implement responsive design"
+
+# Issue 7: CSS framework entegrasyonu
+git add static/css/style.css
+git commit -m "Fixes #7: Integrate CSS framework"
+
+# Issue 8: Frontend form validasyonları
+git add static/js/main.js
+git commit -m "Fixes #8: Add form validations"
+
+# Issue 9: Kullanıcı arayüzü animasyonları
+git add static/js/animations.js
+git commit -m "Fixes #9: Add UI animations"
+
+# Issue 10: Arama ve filtreleme arayüzü
+git add templates/events/event_list.html
+git commit -m "Fixes #10: Create search and filter interface"
+
+# Issue 11: Bildirim sistemi arayüzü
+git add templates/base/base.html
+git commit -m "Fixes #11: Add notification system UI"
+
+# Issue 12: Hata sayfaları
+git add templates/errors/
+git commit -m "Fixes #12: Create error pages"
+```
+
+## Backend Developer (12 Issues)
+
+### Dosyalar:
+1. meetup_buddy/settings.py
+2. users/models.py
+3. events/models.py
+4. users/views.py
+5. events/views.py
+6. users/forms.py
+7. events/forms.py
+8. users/admin.py
+9. events/admin.py
+10. users/urls.py
+11. events/urls.py
+12. meetup_buddy/urls.py
+
+### Commit Komutları:
+```bash
+git checkout -b feature/backend
+
+# Issue 1: Kullanıcı modeli ve authentication
+git add users/models.py
+git commit -m "Fixes #1: Create user model and authentication"
+
+# Issue 2: Etkinlik modeli ve CRUD
+git add events/models.py
+git commit -m "Fixes #2: Create event model and CRUD operations"
+
+# Issue 3: Kullanıcı profil yönetimi
+git add users/views.py users/forms.py
+git commit -m "Fixes #3: Implement user profile management"
+
+# Issue 4: Etkinlik arama ve filtreleme
+git add events/views.py
+git commit -m "Fixes #4: Add event search and filtering"
+
+# Issue 5: Konum bazlı filtreleme
+git add events/views.py
+git commit -m "Fixes #5: Implement location-based filtering"
+
+# Issue 6: Bildirim sistemi
+git add users/views.py
+git commit -m "Fixes #6: Add notification system"
+
+# Issue 7: Kullanıcı etkileşimleri
+git add events/views.py
+git commit -m "Fixes #7: Add user interactions"
+
+# Issue 8: API endpoint'leri
+git add users/urls.py events/urls.py
+git commit -m "Fixes #8: Create API endpoints"
+
+# Issue 9: Güvenlik önlemleri
+git add meetup_buddy/settings.py
+git commit -m "Fixes #9: Add security measures"
+
+# Issue 10: Veritabanı optimizasyonu
+git add users/models.py events/models.py
+git commit -m "Fixes #10: Optimize database"
+
+# Issue 11: Cache sistemi
+git add meetup_buddy/settings.py
+git commit -m "Fixes #11: Implement cache system"
+
+# Issue 12: API dokümantasyonu
+git add docs/api.md
+git commit -m "Fixes #12: Create API documentation"
+```
+
+## Full Stack Developer (12 Issues)
+
+### Dosyalar:
+1. requirements.txt
+2. manage.py
+3. meetup_buddy/wsgi.py
+4. meetup_buddy/asgi.py
+5. Dockerfile
+6. docker-compose.yml
+7. README.md
+8. .gitignore
+9. tests/
+10. scripts/
+11. docs/
+12. config/
+
+### Commit Komutları:
+```bash
+git checkout -b feature/fullstack
+
+# Issue 1: Proje yapılandırması
+git add requirements.txt manage.py
+git commit -m "Fixes #1: Set up project configuration"
+
+# Issue 2: Veritabanı şeması
+git add meetup_buddy/settings.py
+git commit -m "Fixes #2: Design database schema"
+
+# Issue 3: Deployment ve CI/CD
+git add Dockerfile docker-compose.yml
+git commit -m "Fixes #3: Set up deployment and CI/CD"
+
+# Issue 4: Test senaryoları
+git add tests/
+git commit -m "Fixes #4: Create test scenarios"
+
+# Issue 5: Docker containerization
+git add Dockerfile docker-compose.yml
+git commit -m "Fixes #5: Set up Docker containerization"
+
+# Issue 6: Performans optimizasyonu
+git add meetup_buddy/settings.py
+git commit -m "Fixes #6: Optimize performance"
+
+# Issue 7: SEO optimizasyonu
+git add templates/base/base.html
+git commit -m "Fixes #7: Optimize SEO"
+
+# Issue 8: Hata yakalama
+git add meetup_buddy/settings.py
+git commit -m "Fixes #8: Implement error handling"
+
+# Issue 9: UX iyileştirmeleri
+git add static/js/main.js
+git commit -m "Fixes #9: Improve UX"
+
+# Issue 10: Proje dokümantasyonu
+git add README.md docs/
+git commit -m "Fixes #10: Create project documentation"
+
+# Issue 11: Güvenlik testleri
+git add tests/
+git commit -m "Fixes #11: Add security tests"
+
+# Issue 12: Monitoring
+git add scripts/
+git commit -m "Fixes #12: Set up monitoring"
+```
+
+## Önemli Notlar:
+1. Her commit'te ilgili issue numarasını belirtmek zorunludur.
+2. Her ekip üyesi kendi branch'inde çalışmalıdır.
+3. Değişiklikler main branch'e merge edilmeden önce code review yapılmalıdır.
+4. Her commit'ten önce testler çalıştırılmalıdır.
+5. Commit mesajları açıklayıcı olmalıdır. 
